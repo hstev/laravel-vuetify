@@ -1,4 +1,10 @@
+<script setup lang="ts">
+import { Head } from '@inertiajs/vue3';
+</script>
+
 <template>
+    <Head title="Landing" />
+
     <div class="container-landing">
         <span class="laravel">Laravel</span> 🤝 <span class="vuetify">Vuetify</span>
     </div>
