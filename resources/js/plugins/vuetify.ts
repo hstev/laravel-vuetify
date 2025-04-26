@@ -5,7 +5,7 @@ import * as directives from 'vuetify/directives'
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
 
-export const vuetify = createVuetify({
+export const Vuetify = createVuetify({
   components,
   directives,
   icons: {
