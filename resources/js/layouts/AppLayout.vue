@@ -1,12 +1,10 @@
 <script setup lang="ts">
-
-const theme: 'light' | 'dark' = 'dark';
-
+import { useTheme } from '@/composables/useTheme';
 </script>
 
 <template>
     <v-responsive>
-        <v-app :theme="theme">
+        <v-app :theme="useTheme()">
             <v-main class="d-flex h-100 justify-center align-center">
                 <v-container>
                     <slot />
