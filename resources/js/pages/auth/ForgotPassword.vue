@@ -8,11 +8,10 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.processing = true;
-    if (!form.email) {
-        form.processing = false;
+    if (form.errors.email) {
         return;
     }
+    form.processing = true;
     form.post(route('password.email'), {
         onFinish: () => {
             form.reset('email')
@@ -45,6 +44,7 @@ const submit = () => {
                             (v: string) => !!v || 'Email is required',
                             (v: string) => /.+@.+\..+/.test(v) || 'Email must be valid',
                         ]"
+                        :error-messages="form.errors.email"
                         class="mb-4"
                         v-model="form.email"
                     />

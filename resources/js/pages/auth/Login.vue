@@ -12,7 +12,6 @@ const form = useForm({
 
 const submit = () => {
     if (form.errors.email || form.errors.password) {
-        form.processing = false;
         return;
     }
     form.processing = true;
